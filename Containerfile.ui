@@ -1,0 +1,10 @@
+from quay.io/lib/python
+
+COPY requirements_ui.txt requirements_ui.txt
+COPY app.py app.py
+
+RUN pip install -r requirements_ui.txt --no-cache-dir
+
+ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
+
+CMD ["streamlit", "run", "app.py"]

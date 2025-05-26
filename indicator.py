@@ -8,10 +8,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from MLP import MLP
 
-from collections import Counter
-from sklearn.metrics import accuracy_score
-
-
 class Indicator:
 
     def __init__(self, ticker, future_days):

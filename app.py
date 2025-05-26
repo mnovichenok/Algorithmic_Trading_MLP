@@ -12,7 +12,7 @@ if st.button("Determine Optimal Trading Strategy"):
         "Future_Days": future_days
     }
     
-    result = requests.post("http://localhost:8000/input/", json=input) #algo_trading_logic
+    result = requests.post("http://algo_logic:8000/input/", json=input) #algo_trading_logic
 
     if result.status_code == 200:
         signal_map = ["Strong Sell", "Sell", "Hold", "Buy", "Strong Buy"]
